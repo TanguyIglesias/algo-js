@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
 
-let number= readlineSync.question("Donne un nombre entre 1 et 7: ");
+let number=readlineSync.question("Donne un nombre entre 1 et 7: ");
 
 switch(number){
     case '1': 
