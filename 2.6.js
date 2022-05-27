@@ -3,7 +3,7 @@ const readlineSync = require("readline-sync");
 var number=readlineSync.question("Donne un nombre entre 1 et 7: ");
 
 switch(number){
-    case '1': 
+    case "1": 
         console.log("Monday");
     break;
     case '2':

@@ -7,7 +7,7 @@ while(i <= 100){
 
 }
 
-for (let i=0;i<=100;i+=2){
+for ( i=0;i<=100;i+=2){
     console.log(i);
 }
 
