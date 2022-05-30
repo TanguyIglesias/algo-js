@@ -4,6 +4,16 @@ let n= readlineSync.question("Donne un nombre: ");
 
 /**
  * 
+ * @returns {Number} [RandomNumber]
+ */
+
+let rand10= () => {
+    random = Math.floor(Math.random()*10)+1 
+    return random;
+}
+
+/**
+ * 
  * @param {Number} n 
  */
 
@@ -13,17 +23,8 @@ let multiRand= (n)=>{
     }
 }
 
-/**
- * 
- * @returns {Number} [RandomNumber]
- */
-
-let rand10= () => {
-    random = Math.floor(Math.random()*10)+1 
-    return random;
-}
 let average=(arr)=>{
-   sum=arr.reduce((a,b)=> a + b);
+   sum=arr.reduce((a,b)=> a + b,0);
     return sum/arr.length;
 }
 
@@ -48,6 +49,6 @@ function max(arr){
 }
 let arr=[];
 multiRand(n)
-
+console.log(arr)
 console.log(`Le minimum est de ${min(arr)}, le maximum est de ${max(arr)}, la moyenne est de ${average(arr)}`);
 

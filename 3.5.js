@@ -1,4 +1,6 @@
-let arr= [1,4,7,-12];
+let arr= [-1,-4,-7,-12];
+
+//moi
 
 function posNum(value){
     
@@ -19,3 +21,9 @@ else{
     });
     console.log(sum);
 }
+
+
+//correction
+
+let posarray = arr.filter((a)=> a>=0).reduce((a,b)=> a+b,0);
+console.log(posarray);
