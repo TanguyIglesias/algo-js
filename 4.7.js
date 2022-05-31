@@ -36,3 +36,18 @@ else{
 }
 
 console.log(elevator(left, right, call));
+
+// EXERCICE LYDIA
+
+function elevator2(left,right,current){
+    let dist1 = Math.abs(current-left);
+    let dist2 = Math.abs(current-right);
+
+    if (dist1>=dist2){
+        return 'right';
+    }
+    if (dist2>dist1){
+        return 'left';
+    }
+}
+console.log(elevator2(0,2,1));

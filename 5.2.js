@@ -21,15 +21,33 @@ function askTvSerie(){
 }
 
 function randomizeCast(tvSerie){
-    let nbrSerie=readlineSync.question("Combien de séries aimez-vous? : ");
-    tvSerie=askTvSerie()
-    let randCast=[];
-    for(i=1;i<nbrSerie;i++){
-        askTvSerie()
+    let name2= readlineSync.question("Quel est le nom de ta deuxième série préférée? : ");
+    let ProdYear2= readlineSync.question("Quel est l'année de production de ta seconde série préférée? : ");
+    let Cast2= readlineSync.question("Quel est le cast de ton autre série préférée? : ");
+    let arrCast2=[];
+    
+    arrCast2.push(Cast2);
+    for (i=1;Cast2 !== "ok";i++){
+        Cast2= readlineSync.question("Qui d'autre? (écrivez 'ok' pour arrêter) : ");
+        arrCast2[i]=Cast2;
     }
-    randCast.push.apply(tvSerie.Cast);
-    return randCast;
+    
+    arrCast2.pop();
+    arrCast2.push(...tvSerie.Cast);
+
+    let randomArrCast= [];
+    randomArrCast.push(arrCast2);
+    randomArrCast= randomArrCast[0].sort(function(a,b){return 0.5-Math.random()});
+    
+     return {
+        name: name2,
+        ProdYear: ProdYear2,
+        Cast: randomArrCast 
+    }
 }
 
-console.log(randomizeCast(tvSerie));
+tvSerie=askTvSerie();
+randomCast=randomizeCast(tvSerie);
+console.log(randomCast);
+
 

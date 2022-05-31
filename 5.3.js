@@ -13,11 +13,14 @@ function nestedArrayAndObject() {
       },
     }
     // const {} = info // <-- replace the next few `const` lines with this
-    const title = info.title
-    const protagonistName = info.protagonist.name
-    const enemy = info.protagonist.enemies[3]
-    const enemyTitle = enemy.title
-    const enemyName = enemy.name
+
+    const {title:title, protagonist:{name:protagonistName,enemies:[,,,{title:enemyTitle,name:enemyName}]}} = info;
+
+    // const = info.title
+    // const protagonistName = info.protagonist.name
+    // const enemy = info.protagonist.enemies[3]
+    // const enemyTitle = enemy.title
+    // const enemyName = enemy.name
       
     return `${enemyName} (${enemyTitle}) is an enemy to ${protagonistName} in "${title}"`
   }
