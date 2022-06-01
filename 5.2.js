@@ -37,7 +37,7 @@ function randomizeCast(tvSerie){
 
     let randomArrCast= [];
     randomArrCast.push(arrCast2);
-    randomArrCast= randomArrCast[0].sort(function(a,b){return 0.5-Math.random()});
+    randomArrCast= randomArrCast[0].sort(function(){return 0.5-Math.random()});
     
      return {
         name: name2,

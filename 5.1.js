@@ -19,4 +19,6 @@ function askTvSerie(){
     }
     
 }
- console.log(askTvSerie())
+const série= askTvSerie();
+
+ console.log(série.ProdYear);
